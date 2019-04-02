@@ -23,9 +23,6 @@ public class RecipeSearch extends Application {
         stage.setScene(scene);
         stage.show();
 
-        //GIT TEST YEAH
-        //HELLO OG
-        // GIT TEST OG
     }
 
     /**
