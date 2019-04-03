@@ -20,8 +20,8 @@
               <items>
                 <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="165.0" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
-                        <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="205.0" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
+                        <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="162.5" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
+                        <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="202.5" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
                          <RadioButton fx:id="radioButtonAll" layoutX="140.0" layoutY="247.5" mnemonicParsing="false" text="Alla" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="247.5" />
                          <RadioButton fx:id="radioButtonEasy" layoutX="140.0" layoutY="272.5" mnemonicParsing="false" text="Lätt" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="272.5" />
                          <RadioButton fx:id="radioButtonMedium" layoutX="140.0" layoutY="297.5" mnemonicParsing="false" text="Medel" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="297.5" />
@@ -36,8 +36,10 @@
                      </children></AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <FlowPane fx:id="displayRecipe" prefHeight="498.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <ScrollPane layoutY="-1.0" prefHeight="498.0" prefWidth="516.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                        <ScrollPane layoutX="6.0" layoutY="0.0" prefHeight="496.0" prefWidth="516.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="1.0">
+                           <content>
+                              <FlowPane fx:id="displayRecipe" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="516.0" />
+                           </content></ScrollPane>
                      </children></AnchorPane>
               </items>
             </SplitPane>
