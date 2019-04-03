@@ -36,7 +36,7 @@
                      </children></AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <FlowPane fx:id="displayRecipie" prefHeight="498.0" prefWidth="516.0" />
+                        <FlowPane fx:id="displayRecipe" prefHeight="498.0" prefWidth="516.0" />
                         <ScrollPane layoutY="-1.0" prefHeight="498.0" prefWidth="516.0" />
                      </children></AnchorPane>
               </items>
