@@ -33,6 +33,7 @@ public class RecipeSearchController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        rbc = new RecipeBackendController();
         updateRecipeList();
     }
 
