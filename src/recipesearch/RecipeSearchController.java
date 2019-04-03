@@ -10,6 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 
 
@@ -25,6 +26,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private RadioButton radioButtonHard;
     @FXML private Spinner maxPriceSpinner;
     @FXML private Slider maxTimeSlider;
+    @FXML private FlowPane displayRecipie;
 
 
     @Override

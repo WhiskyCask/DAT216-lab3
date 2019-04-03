@@ -2,10 +2,12 @@
 
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Text?>
 
@@ -14,7 +16,7 @@
       <StackPane prefHeight="500.0" prefWidth="800.0">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-            <SplitPane dividerPositions="0.35" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #FF0000;">
+            <SplitPane dividerPositions="0.35" prefHeight="160.0" prefWidth="200.0">
               <items>
                 <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
@@ -32,7 +34,11 @@
                         <Text layoutX="14.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
                         <Text layoutX="13.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
                      </children></AnchorPane>
-                <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <FlowPane fx:id="displayRecipie" prefHeight="498.0" prefWidth="516.0" />
+                        <ScrollPane layoutY="-1.0" prefHeight="498.0" prefWidth="516.0" />
+                     </children></AnchorPane>
               </items>
             </SplitPane>
          </children>
