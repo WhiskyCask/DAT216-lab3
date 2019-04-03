@@ -11,33 +11,33 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
    <children>
-      <StackPane prefHeight="500.0" prefWidth="800.0">
+      <StackPane prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" />
             <SplitPane dividerPositions="0.35" prefHeight="160.0" prefWidth="200.0">
               <items>
                 <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="radioButtonAll" layoutX="112.0" layoutY="259.0" mnemonicParsing="false" text="Alla" />
-                        <ComboBox fx:id="mainIngredientComboBox" layoutX="112.0" layoutY="166.0" prefWidth="150.0" />
-                        <ComboBox fx:id="cuisineComboBox" layoutX="112.0" layoutY="210.0" prefWidth="150.0" />
-                        <RadioButton fx:id="radioButtonHard" layoutX="112.0" layoutY="345.0" mnemonicParsing="false" text="Svår" />
-                        <RadioButton fx:id="radioButtonMedium" layoutX="112.0" layoutY="315.0" mnemonicParsing="false" text="Medel" />
-                        <RadioButton fx:id="radioButtonEasy" layoutX="112.0" layoutY="287.0" mnemonicParsing="false" text="Lätt" />
-                        <Spinner fx:id="maxPriceSpinner" layoutX="113.0" layoutY="373.0" prefHeight="25.0" prefWidth="61.0" />
-                        <Slider fx:id="maxTimeSlider" layoutX="112.0" layoutY="414.0" />
-                        <Text layoutX="10.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Huvudingrediens:" textAlignment="RIGHT" wrappingWidth="98.92449951171875" />
-                        <Text layoutX="14.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kök:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
-                        <Text layoutX="14.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
-                        <Text layoutX="14.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
-                        <Text layoutX="13.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid:" textAlignment="RIGHT" wrappingWidth="90.2578125" />
+                        <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="165.0" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
+                        <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="205.0" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
+                         <RadioButton fx:id="radioButtonAll" layoutX="140.0" layoutY="247.5" mnemonicParsing="false" text="Alla" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="247.5" />
+                         <RadioButton fx:id="radioButtonEasy" layoutX="140.0" layoutY="272.5" mnemonicParsing="false" text="Lätt" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="272.5" />
+                         <RadioButton fx:id="radioButtonMedium" layoutX="140.0" layoutY="297.5" mnemonicParsing="false" text="Medel" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="297.5" />
+                        <RadioButton fx:id="radioButtonHard" layoutX="140.0" layoutY="322.5" mnemonicParsing="false" text="Svår" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="322.5" />
+                        <Spinner fx:id="maxPriceSpinner" layoutX="140.0" layoutY="355.0" prefHeight="25.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="355.0" />
+                        <Slider fx:id="maxTimeSlider" layoutX="140.0" layoutY="397.5" prefHeight="16.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="397.5" />
+                        <Text layoutX="10.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Huvudingrediens:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="167.0" />
+                        <Text layoutX="10.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kök:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="207.0" />
+                        <Text layoutX="10.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="247.93310546875" />
+                        <Text layoutX="10.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="357.93310546875" />
+                        <Text layoutX="10.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="397.93310546875" />
                      </children></AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <FlowPane fx:id="displayRecipe" prefHeight="498.0" prefWidth="516.0" />
-                        <ScrollPane layoutY="-1.0" prefHeight="498.0" prefWidth="516.0" />
+                        <FlowPane fx:id="displayRecipe" prefHeight="498.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ScrollPane layoutY="-1.0" prefHeight="498.0" prefWidth="516.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
                      </children></AnchorPane>
               </items>
             </SplitPane>
