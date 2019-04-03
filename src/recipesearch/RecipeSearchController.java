@@ -12,13 +12,10 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.ait.dat215.lab2.Recipe;
-import se.chalmers.ait.dat215.lab2.RecipeDatabase;
-
 
 public class RecipeSearchController implements Initializable {
 
-
-    private RecipeBackendController rbc;
+    private RecipeBackendController rbc = new RecipeBackendController();
 
     @FXML private ComboBox mainIngredientComboBox;
     @FXML private ComboBox cuisineComboBox;
@@ -29,7 +26,6 @@ public class RecipeSearchController implements Initializable {
     @FXML private Spinner maxPriceSpinner;
     @FXML private Slider maxTimeSlider;
     @FXML private FlowPane displayRecipe;
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

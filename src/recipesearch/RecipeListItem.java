@@ -1,6 +1,5 @@
 package recipesearch;
 
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
@@ -11,8 +10,10 @@ import se.chalmers.ait.dat215.lab2.Recipe;
 import java.io.IOException;
 
 public class RecipeListItem extends AnchorPane {
+
     private RecipeSearchController parentController;
     private Recipe recipe;
+
     @FXML private ImageView imgItemList;
     @FXML private Text descriptionItemList;
 
