@@ -16,7 +16,7 @@ import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 
 public class RecipeSearchController implements Initializable {
 
-    RecipeDatabase db = RecipeDatabase.getSharedInstance();
+    private RecipeDatabase db = RecipeDatabase.getSharedInstance();
 
     @FXML private ComboBox mainIngredientComboBox;
     @FXML private ComboBox cuisineComboBox;
