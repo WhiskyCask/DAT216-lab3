@@ -6,7 +6,7 @@ import se.chalmers.ait.dat215.lab2.SearchFilter;
 
 import java.util.List;
 
-public class RecipeBeckendController {
+public class RecipeBackendController {
 
     private RecipeDatabase db = RecipeDatabase.getSharedInstance();
     private String cuisine;
