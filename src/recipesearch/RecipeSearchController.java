@@ -131,6 +131,7 @@ public class RecipeSearchController implements Initializable {
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 if (newValue != null && !newValue.equals(oldValue) && !maxTimeSlider.isValueChanging()) {
                     rbc.setMaxTime(newValue.intValue());
+                    updateRecipeList();
                 }
             }
         });
