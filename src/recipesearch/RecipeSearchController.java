@@ -2,6 +2,8 @@
 package recipesearch;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.ChangeListener;
@@ -25,6 +27,7 @@ import se.chalmers.ait.dat215.lab2.Recipe;
 public class RecipeSearchController implements Initializable {
 
     private RecipeBackendController rbc = new RecipeBackendController();
+    private Map<String, RecipeListItem> recipeListItemMap = new HashMap<>();
 
     @FXML private ComboBox mainIngredientComboBox;
     @FXML private ComboBox cuisineComboBox;
@@ -46,6 +49,13 @@ public class RecipeSearchController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         rbc = new RecipeBackendController();
+
+        /* Fill the map with recipes */
+        for (Recipe recipe : rbc.getRecipes()) {
+            RecipeListItem recipeListItem = new RecipeListItem(recipe, this);
+            recipeListItemMap.put(recipe.getName(), recipeListItem);
+        }
+
         updateRecipeList();
 
         mainIngredientComboBox.getItems().addAll("Visa alla", "Apa", "Bepa", "Cepa", "Depa");
@@ -133,7 +143,7 @@ public class RecipeSearchController implements Initializable {
 
         for (Recipe recipe : rbc.getRecipes()) {
 
-            recipeListItem = new RecipeListItem(recipe, this);
+            recipeListItem = recipeListItemMap.get(recipe.getName());
 
             displayRecipe.getChildren().add(recipeListItem);
 
