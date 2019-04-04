@@ -1,5 +1,6 @@
 package recipesearch;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
@@ -34,5 +35,10 @@ public class RecipeListItem extends AnchorPane {
         imgItemList.setImage(recipe.getFXImage());
         descriptionItemList.setText(recipe.getDescription());
 
+    }
+
+    @FXML
+    protected void onClick(Event event) {
+        parentController.openRecipeView(recipe);
     }
 }

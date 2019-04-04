@@ -15,6 +15,10 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.ait.dat215.lab2.Recipe;
 
@@ -31,6 +35,12 @@ public class RecipeSearchController implements Initializable {
     @FXML private Spinner maxPriceSpinner;
     @FXML private Slider maxTimeSlider;
     @FXML private FlowPane displayRecipe;
+
+    @FXML private ImageView recipeImageView;
+    @FXML private Label recipeLabel;
+
+    @FXML private AnchorPane detailPane;
+    @FXML private SplitPane searchPane;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -97,11 +107,8 @@ public class RecipeSearchController implements Initializable {
 
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if (newValue) {
-
-                }
-                else {
-                    Integer value = Integer.valueOf(maxPriceSpinner.getEditor().getText());
+                if (!newValue) {
+                    int value = Integer.valueOf(maxPriceSpinner.getEditor().getText());
                     rbc.setMaxPrice(value);
                     updateRecipeList();
                 }
@@ -131,7 +138,21 @@ public class RecipeSearchController implements Initializable {
             displayRecipe.getChildren().add(recipeListItem);
 
         }
+    }
 
+    private void populateRecipeDetailView(Recipe recipe) {
+        recipeLabel.setText(recipe.getName());
+        recipeImageView.setImage(recipe.getFXImage());
+    }
+
+    @FXML
+    public void closeRecipeView() {
+        searchPane.toFront();
+    }
+
+    public void openRecipeView(Recipe recipe) {
+        populateRecipeDetailView(recipe);
+        detailPane.toFront();
     }
 
 }

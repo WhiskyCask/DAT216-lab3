@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
    <children>
       <StackPane prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-            <SplitPane dividerPositions="0.35" prefHeight="160.0" prefWidth="200.0">
+            <AnchorPane fx:id="detailPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2;">
+               <children>
+                  <ImageView fx:id="recipeImageView" fitHeight="150.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="recipeLabel" layoutX="170.0" layoutY="10.0" prefHeight="54.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Button layoutX="700.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeRecipeView" text="Stäng" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children></AnchorPane>
+            <SplitPane fx:id="searchPane" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
               <items>
-                <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
                         <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="162.5" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
                         <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="202.5" prefHeight="26.0" prefWidth="125.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
@@ -33,7 +45,8 @@
                         <Text layoutX="10.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="247.93310546875" />
                         <Text layoutX="10.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="357.93310546875" />
                         <Text layoutX="10.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid:" textAlignment="RIGHT" wrappingWidth="120" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="397.93310546875" />
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
                         <ScrollPane layoutX="6.0" layoutY="0.0" prefHeight="496.0" prefWidth="516.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="1.0">

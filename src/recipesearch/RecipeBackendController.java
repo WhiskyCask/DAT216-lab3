@@ -15,7 +15,7 @@ public class RecipeBackendController {
     private int maxPrice;
     private int maxTime;
 
-    public List<Recipe> getRecipes(){
+    public List<Recipe> getRecipes() {
         return db.search(new SearchFilter(difficulty,maxTime,cuisine,maxPrice,mainIngredient));
     }
 
