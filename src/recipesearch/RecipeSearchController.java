@@ -74,7 +74,7 @@ public class RecipeSearchController implements Initializable {
         cuisineComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
             @Override
-            public void changed(ObservableValue observable, String oldValue, String newValue) {
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 rbc.setCuisine(newValue);
                 updateRecipeList();
             }
