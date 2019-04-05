@@ -58,7 +58,7 @@ public class RecipeSearchController implements Initializable {
 
         updateRecipeList();
 
-        mainIngredientComboBox.getItems().addAll("Visa alla", "Kött", "Fisk", "Kyckling", "Vegetariskt");
+        mainIngredientComboBox.getItems().addAll("Visa alla", "Kött", "Fisk", "Kyckling", "Vegetarisk");
         mainIngredientComboBox.getSelectionModel().select("Visa alla");
         mainIngredientComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
