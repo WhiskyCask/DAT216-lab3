@@ -58,7 +58,7 @@ public class RecipeSearchController implements Initializable {
 
         updateRecipeList();
 
-        mainIngredientComboBox.getItems().addAll("Visa alla", "Apa", "Bepa", "Cepa", "Depa");
+        mainIngredientComboBox.getItems().addAll("Visa alla", "Kött", "Fisk", "Kyckling", "Vegetariskt");
         mainIngredientComboBox.getSelectionModel().select("Visa alla");
         mainIngredientComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
@@ -69,7 +69,7 @@ public class RecipeSearchController implements Initializable {
             }
         });
 
-        cuisineComboBox.getItems().addAll("Visa alla", "Sverige", "Frankrike", "Cepa", "Depa");
+        cuisineComboBox.getItems().addAll("Visa alla", "Sverige", "Grekland", "Indien", "Asien", "Afrika", "Frankrike");
         cuisineComboBox.getSelectionModel().select("Visa alla");
         cuisineComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 
