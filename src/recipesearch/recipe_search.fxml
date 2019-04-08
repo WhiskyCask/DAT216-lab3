@@ -32,6 +32,9 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
+                        <ImageView fitHeight="93.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label text="Recept" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Label" />
                         <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="162.5" prefHeight="26.0" prefWidth="125.0" styleClass="text-small" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
                         <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="202.5" prefHeight="26.0" prefWidth="125.0" styleClass="text-small" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
                          <RadioButton fx:id="radioButtonAll" layoutX="140.0" layoutY="247.5" mnemonicParsing="false" styleClass="text-normal" text="Alla" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="247.5" />
