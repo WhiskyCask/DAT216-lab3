@@ -13,9 +13,12 @@
     -fx-font-family: "Avenir Book";
 }
 .logo {
-
+    -fx-font-size: 48px;
+    -fx-font-family: "Phosphate";
 }
 
 .logo-twirl {
-
+    -fx-font-size: 64px;
+    -fx-font-family: "SignPainter";
+    -fx-rotate: -20px;
 }

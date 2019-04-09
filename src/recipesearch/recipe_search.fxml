@@ -37,8 +37,8 @@
                            <image>
                               <Image url="@resources/logo.png" />
                            </image></ImageView>
-                        <Label layoutX="121.0" layoutY="46.0" text="Recept" />
-                        <Label layoutX="158.0" layoutY="64.0" text="Sök" />
+                        <Label layoutX="117.0" layoutY="27.0" styleClass="logo" text="Recept" />
+                        <Label layoutX="194.0" layoutY="50.0" styleClass="logo-twirl" text="Sök" textFill="#ffac33" />
                         <ComboBox fx:id="mainIngredientComboBox" layoutX="140.0" layoutY="162.5" prefHeight="26.0" prefWidth="125.0" styleClass="text-small" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="165.0" />
                         <ComboBox fx:id="cuisineComboBox" layoutX="140.0" layoutY="202.5" prefHeight="26.0" prefWidth="125.0" styleClass="text-small" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="205.0" />
                          <RadioButton fx:id="radioButtonAll" layoutX="140.0" layoutY="247.5" mnemonicParsing="false" styleClass="text-normal" text="Alla" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="247.5" />
