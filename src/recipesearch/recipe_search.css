@@ -26,3 +26,11 @@
     -fx-font-family: "SignPainter";
     -fx-rotate: -20px;
 }
+
+.text-area .content {
+    -fx-background-color: -fx-background;
+}
+
+.text-area  {
+    -fx-background-color: -fx-background;
+}

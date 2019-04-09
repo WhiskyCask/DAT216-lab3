@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -17,6 +18,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.util.Callback;
+import se.chalmers.ait.dat215.lab2.Ingredient;
 import se.chalmers.ait.dat215.lab2.Recipe;
 
 public class RecipeSearchController implements Initializable {
@@ -43,6 +45,14 @@ public class RecipeSearchController implements Initializable {
     @FXML private AnchorPane detailPane;
     @FXML private SplitPane searchPane;
 
+    @FXML private ImageView closeImageView;
+
+    @FXML private Label timeLabel;
+    @FXML private Label priceLabel;
+    @FXML private Label servingsLabel;
+    @FXML private TextArea descriptionTextArea;
+    @FXML private TextArea instructionTextArea;
+    @FXML private TextArea ingredientsTextArea;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -158,6 +168,20 @@ public class RecipeSearchController implements Initializable {
         imgCuisine.setImage(getCuisineImage(recipe.getCuisine()));
         imgMainIngredient.setImage(getMainIngredientImage(recipe.getMainIngredient()));
         imgDifficulty.setImage(getDifficultyImage(recipe.getDifficulty()));
+        priceLabel.setText(Integer.toString(recipe.getPrice()));
+        timeLabel.setText(Integer.toString(recipe.getTime()));
+        servingsLabel.setText(Integer.toString(recipe.getServings()));
+        descriptionTextArea.setText(recipe.getDescription());
+        instructionTextArea.setText(recipe.getInstruction());
+
+        StringBuilder ingredients = new StringBuilder("");
+        for (Ingredient ingredient : recipe.getIngredients()) {
+            ingredients.append(ingredient);
+            ingredients.append('\n');
+        }
+        ingredientsTextArea.setText(ingredients.toString());
+
+
     }
 
     public Image getCuisineImage(String cuisine) {
@@ -249,7 +273,7 @@ public class RecipeSearchController implements Initializable {
     }
 
 
-                @FXML
+    @FXML
     public void closeRecipeView() {
         searchPane.toFront();
     }
@@ -375,5 +399,28 @@ public class RecipeSearchController implements Initializable {
         };
         cuisineComboBox.setButtonCell(cellFactory.call(null));
         cuisineComboBox.setCellFactory(cellFactory);
+    }
+
+    @FXML
+    public void closeButtonMouseEntered(){
+        closeImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "recipesearch/resources/icon_close_hover.png")));
+    }
+
+    @FXML
+    public void closeButtonMouseClicked(){
+        closeImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "recipesearch/resources/icon_close_pressed.png")));
+    }
+
+    @FXML
+    public void closeButtonMouseExited(){
+        closeImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "recipesearch/resources/icon_close.png")));
+    }
+
+    @FXML
+    public void mouseTrap(Event event){
+        event.consume();
     }
 }
