@@ -164,22 +164,22 @@ public class RecipeSearchController implements Initializable {
         String iconPath;
         switch(cuisine) {
             case "Sverige":
-                iconPath = "RecipeSearch/resources/icon_flag_sweden.png";
+                iconPath = "recipesearch/resources/icon_flag_sweden.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Indien":
-                iconPath = "RecipeSearch/resources/icon_flag_india.png";
+                iconPath = "recipesearch/resources/icon_flag_india.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Afrika":
-                iconPath = "RecipeSearch/resources/icon_flag_africa.png";
+                iconPath = "recipesearch/resources/icon_flag_africa.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Asien":
-                iconPath = "RecipeSearch/resources/icon_flag_asia.png";
+                iconPath = "recipesearch/resources/icon_flag_asia.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Grekland":
-                iconPath = "RecipeSearch/resources/icon_flag_greece.png";
+                iconPath = "recipesearch/resources/icon_flag_greece.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Frankrike":
-                iconPath = "RecipeSearch/resources/icon_flag_france.png";
+                iconPath = "recipesearch/resources/icon_flag_france.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
 
         }
@@ -190,16 +190,16 @@ public class RecipeSearchController implements Initializable {
         String iconPath;
         switch(mainIngredient) {
             case "Kött":
-                iconPath = "RecipeSearch/resources/icon_main_meat.png";
+                iconPath = "recipesearch/resources/icon_main_meat.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Fisk":
-                iconPath = "RecipeSearch/resources/icon_main_fish.png";
+                iconPath = "recipesearch/resources/icon_main_fish.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Kyckling":
-                iconPath = "RecipeSearch/resources/icon_main_chicken.png";
+                iconPath = "recipesearch/resources/icon_main_chicken.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Vegetarisk":
-                iconPath = "RecipeSearch/resources/icon_main_veg.png";
+                iconPath = "recipesearch/resources/icon_main_veg.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
         return null;
@@ -209,32 +209,32 @@ public class RecipeSearchController implements Initializable {
         String iconPath;
         switch(difficulty){
             case "Lätt":
-                iconPath = "RecipeSearch/resources/icon_difficulty_easy.png";
+                iconPath = "recipesearch/resources/icon_difficulty_easy.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Medel":
-                iconPath = "RecipeSearch/resources/icon_difficulty_medium.png";
+                iconPath = "recipesearch/resources/icon_difficulty_medium.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Svår":
-                iconPath = "RecipeSearch/resources/icon_difficulty_hard.png";
+                iconPath = "recipesearch/resources/icon_difficulty_hard.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
         return null;
     }
-    public Image getSquareImage(Image image){
+    public Image getSquareImage(Image image) {
 
         int x = 0;
         int y = 0;
         int width = 0;
         int height = 0;
 
-        if(image.getWidth() > image.getHeight()){
+        if (image.getWidth() > image.getHeight()) {
             width = (int) image.getHeight();
             height = (int) image.getHeight();
             x = (int)(image.getWidth() - width)/2;
             y = 0;
         }
 
-        else if(image.getHeight() > image.getWidth()){
+        else if (image.getHeight() > image.getWidth()) {
             width = (int) image.getWidth();
             height = (int) image.getWidth();
             x = 0;
@@ -282,19 +282,19 @@ public class RecipeSearchController implements Initializable {
                                 switch (item) {
 
                                     case "Kött":
-                                        iconPath = "RecipeSearch/resources/icon_main_meat.png";
+                                        iconPath = "recipesearch/resources/icon_main_meat.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Fisk":
-                                        iconPath = "RecipeSearch/resources/icon_main_fish.png";
+                                        iconPath = "recipesearch/resources/icon_main_fish.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Kyckling":
-                                        iconPath = "RecipeSearch/resources/icon_main_chicken.png";
+                                        iconPath = "recipesearch/resources/icon_main_chicken.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Vegetarisk":
-                                        iconPath = "RecipeSearch/resources/icon_main_veg.png";
+                                        iconPath = "recipesearch/resources/icon_main_veg.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                 }
@@ -337,27 +337,27 @@ public class RecipeSearchController implements Initializable {
                                 switch (item) {
 
                                     case "Sverige":
-                                        iconPath = "RecipeSearch/resources/icon_flag_sweden.png";
+                                        iconPath = "recipesearch/resources/icon_flag_sweden.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Indien":
-                                        iconPath = "RecipeSearch/resources/icon_flag_india.png";
+                                        iconPath = "recipesearch/resources/icon_flag_india.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Afrika":
-                                        iconPath = "RecipeSearch/resources/icon_flag_africa.png";
+                                        iconPath = "recipesearch/resources/icon_flag_africa.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Asien":
-                                        iconPath = "RecipeSearch/resources/icon_flag_asia.png";
+                                        iconPath = "recipesearch/resources/icon_flag_asia.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Grekland":
-                                        iconPath = "RecipeSearch/resources/icon_flag_greece.png";
+                                        iconPath = "recipesearch/resources/icon_flag_greece.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                     case "Frankrike":
-                                        iconPath = "RecipeSearch/resources/icon_flag_france.png";
+                                        iconPath = "recipesearch/resources/icon_flag_france.png";
                                         icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
                                         break;
                                 }
