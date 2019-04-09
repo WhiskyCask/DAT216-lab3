@@ -38,7 +38,6 @@ public class RecipeListItem extends AnchorPane {
         imgItemList.setImage(recipe.getFXImage());
         descriptionItemList.setText(recipe.getDescription());
 
-        // OG, HUR GÖR MAN HÄR???
         imgCuisine.setImage(parentController.getCuisineImage(recipe.getCuisine()));
         imgMainIngredient.setImage(parentController.getMainIngredientImage(recipe.getMainIngredient()));
         imgDifficulty.setImage(parentController.getDifficultyImage(recipe.getDifficulty()));
