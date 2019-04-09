@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.util.Callback;
@@ -35,6 +36,9 @@ public class RecipeSearchController implements Initializable {
 
     @FXML private ImageView recipeImageView;
     @FXML private Label recipeLabel;
+    @FXML private ImageView imgCuisine;
+    @FXML private ImageView imgMainIngredient;
+    @FXML private ImageView imgDifficulty;
 
     @FXML private AnchorPane detailPane;
     @FXML private SplitPane searchPane;
@@ -150,10 +154,102 @@ public class RecipeSearchController implements Initializable {
 
     private void populateRecipeDetailView(Recipe recipe) {
         recipeLabel.setText(recipe.getName());
-        recipeImageView.setImage(recipe.getFXImage());
+        recipeImageView.setImage(getSquareImage(recipe.getFXImage()));
+        imgCuisine.setImage(getCuisineImage(recipe.getCuisine()));
+        imgMainIngredient.setImage(getMainIngredientImage(recipe.getMainIngredient()));
+        imgDifficulty.setImage(getDifficultyImage(recipe.getDifficulty()));
     }
 
-    @FXML
+    public Image getCuisineImage(String cuisine) {
+        String iconPath;
+        switch(cuisine) {
+            case "Sverige":
+                iconPath = "RecipeSearch/resources/icon_flag_sweden.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Indien":
+                iconPath = "RecipeSearch/resources/icon_flag_india.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Afrika":
+                iconPath = "RecipeSearch/resources/icon_flag_africa.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Asien":
+                iconPath = "RecipeSearch/resources/icon_flag_asia.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Grekland":
+                iconPath = "RecipeSearch/resources/icon_flag_greece.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Frankrike":
+                iconPath = "RecipeSearch/resources/icon_flag_france.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+
+        }
+        return null;
+    }
+
+    public Image getMainIngredientImage(String mainIngredient) {
+        String iconPath;
+        switch(mainIngredient) {
+            case "Kött":
+                iconPath = "RecipeSearch/resources/icon_main_meat.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Fisk":
+                iconPath = "RecipeSearch/resources/icon_main_fish.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Kyckling":
+                iconPath = "RecipeSearch/resources/icon_main_chicken.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Vegetarisk":
+                iconPath = "RecipeSearch/resources/icon_main_veg.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+        }
+        return null;
+    }
+
+    public Image getDifficultyImage(String difficulty){
+        String iconPath;
+        switch(difficulty){
+            case "Lätt":
+                iconPath = "RecipeSearch/resources/icon_difficulty_easy.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Medel":
+                iconPath = "RecipeSearch/resources/icon_difficulty_medium.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Svår":
+                iconPath = "RecipeSearch/resources/icon_difficulty_hard.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+        }
+        return null;
+    }
+    public Image getSquareImage(Image image){
+
+        int x = 0;
+        int y = 0;
+        int width = 0;
+        int height = 0;
+
+        if(image.getWidth() > image.getHeight()){
+            width = (int) image.getHeight();
+            height = (int) image.getHeight();
+            x = (int)(image.getWidth() - width)/2;
+            y = 0;
+        }
+
+        else if(image.getHeight() > image.getWidth()){
+            width = (int) image.getWidth();
+            height = (int) image.getWidth();
+            x = 0;
+            y = (int) (image.getHeight() - height)/2;
+        }
+
+        else{
+            //Width equals Height, return original image
+            return image;
+        }
+        return new WritableImage(image.getPixelReader(), x, y, width, height);
+    }
+
+
+                @FXML
     public void closeRecipeView() {
         searchPane.toFront();
     }

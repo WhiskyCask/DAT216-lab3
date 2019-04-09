@@ -23,6 +23,9 @@
             <AnchorPane fx:id="detailPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2;">
                <children>
                   <ImageView fx:id="recipeImageView" fitHeight="150.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <ImageView fx:id="imgCuisine" fitHeight="46.0" fitWidth="61.0" layoutX="92.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgMainIngredient" fitHeight="29.0" fitWidth="37.0" layoutX="177.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgDifficulty" fitHeight="29.0" fitWidth="93.0" layoutX="230.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
                   <Label fx:id="recipeLabel" layoutX="170.0" layoutY="10.0" prefHeight="54.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font size="24.0" />
