@@ -129,7 +129,7 @@
                         </Label>
                         <Label fx:id="servingsLabel" layoutX="14.0" layoutY="226.0" text="Port" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="226.0" />
                         <Label layoutX="41.0" layoutY="226.0" text="Portioner" AnchorPane.topAnchor="226.0" />
-                        <ImageView fx:id="closeImageView" fitHeight="29.0" fitWidth="29.0" layoutX="675.0" layoutY="15.0" onDragDetected="#closeRecipeView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                        <ImageView fx:id="closeImageView" fitHeight="29.0" fitWidth="29.0" layoutX="675.0" layoutY="15.0" onDragDetected="#closeRecipeView" onMouseClicked="#closeButtonMouseClicked" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                            <image>
                               <Image url="@resources/icon_close.png" />
                            </image>
