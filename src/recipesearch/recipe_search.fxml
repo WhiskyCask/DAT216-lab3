@@ -26,11 +26,11 @@
                   <ImageView fx:id="imgCuisine" fitHeight="46.0" fitWidth="61.0" layoutX="92.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="imgMainIngredient" fitHeight="29.0" fitWidth="37.0" layoutX="177.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="imgDifficulty" fitHeight="29.0" fitWidth="93.0" layoutX="230.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="recipeLabel" layoutX="170.0" layoutY="10.0" prefHeight="54.0" prefWidth="460.0" text="Label" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
+                  <Label fx:id="recipeLabel" layoutX="170.0" layoutY="10.0" prefHeight="54.0" prefWidth="460.0" styleClass="text-title" text="Label" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
-                  <Button layoutX="700.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeRecipeView" text="Stäng" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Button layoutX="700.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeRecipeView" styleClass="text-normal" text="Stäng" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
                </children></AnchorPane>
             <SplitPane fx:id="searchPane" dividerPositions="0.4" prefHeight="160.0" prefWidth="200.0">
               <items>

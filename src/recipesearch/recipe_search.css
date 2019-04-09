@@ -12,6 +12,10 @@
     -fx-font-size: 15px;
     -fx-font-family: "Avenir Book";
 }
+.text-title {
+    -fx-font-size: 30px;
+    -fx-font-family: "Avenir Book";
+}
 .logo {
     -fx-font-size: 48px;
     -fx-font-family: "Phosphate";
