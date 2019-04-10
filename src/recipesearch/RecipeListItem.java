@@ -40,7 +40,7 @@ public class RecipeListItem extends AnchorPane {
         this.recipe = recipe;
         this.parentController = recipeSearchController;
 
-        imgItemList.setImage(recipe.getFXImage());
+        imgItemList.setImage(parentController.getSquareImage(recipe.getFXImage()));
         descriptionItemList.setText(recipe.getDescription());
 
         imgCuisine.setImage(parentController.getCuisineImage(recipe.getCuisine()));
