@@ -21,7 +21,7 @@ public class RecipeListItem extends AnchorPane {
     @FXML private Label timeLabel;
     @FXML private Label priceLabel;
     @FXML private ImageView imgItemList;
-    @FXML private TextArea descriptionItemList;
+    @FXML private Label descriptionItemList;
     @FXML private ImageView imgCuisine;
     @FXML private ImageView imgMainIngredient;
     @FXML private ImageView imgDifficulty;
