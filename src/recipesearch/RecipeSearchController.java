@@ -53,6 +53,9 @@ public class RecipeSearchController implements Initializable {
     @FXML private TextArea descriptionTextArea;
     @FXML private TextArea instructionTextArea;
     @FXML private TextArea ingredientsTextArea;
+
+    @FXML private Label maxTimeLabel;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -139,6 +142,7 @@ public class RecipeSearchController implements Initializable {
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 if (newValue != null && !newValue.equals(oldValue) && !maxTimeSlider.isValueChanging()) {
                     rbc.setMaxTime(newValue.intValue());
+                    maxTimeLabel.setText(newValue.toString());
                     updateRecipeList();
                 }
             }
