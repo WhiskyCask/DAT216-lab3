@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
-<fx:root onMouseClicked="#onClick" prefHeight="100.0" prefWidth="495.0" styleClass="recipe-list-item" stylesheets="@recipe_listitem.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root onMouseClicked="#onClick" prefHeight="100.0" prefWidth="495.0" styleClass="recipe-list-item" stylesheets="@recipe_listitem.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="imgMainIngredient" fitHeight="26.0" fitWidth="25.0" layoutX="166.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgMainIngredient" fitHeight="26.0" fitWidth="25.0" layoutX="164.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/icon_main_chicken.png" />
          </image>
@@ -17,8 +19,7 @@
             <Image url="@../../recipes/recipe1.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="descriptionItemList" layoutX="166.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stekt Ägg" />
-      <ImageView fx:id="imgDifficulty" fitHeight="16.0" fitWidth="52.0" layoutX="200.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgDifficulty" fitHeight="16.0" fitWidth="52.0" layoutX="200.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/icon_difficulty_easy.png" />
          </image>
@@ -28,5 +29,15 @@
             <Image url="@resources/icon_flag_sweden.png" />
          </image>
       </ImageView>
+      <TextArea fx:id="descriptionItemList" editable="false" layoutX="166.0" layoutY="95.0" prefHeight="49.0" prefWidth="316.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="nameLabel" layoutX="173.0" layoutY="14.0" prefHeight="32.0" prefWidth="119.0" text="Label">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLabel" layoutX="263.0" layoutY="52.0" prefHeight="16.0" prefWidth="25.0" text="TId" />
+      <Label layoutX="306.0" layoutY="52.0" text="minuter" />
+      <Label fx:id="priceLabel" layoutX="358.0" layoutY="52.0" text="pris" />
+      <Label layoutX="382.0" layoutY="52.0" text="kr" />
    </children>
 </fx:root>
