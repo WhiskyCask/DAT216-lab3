@@ -37,6 +37,6 @@
       <Label layoutX="288.0" layoutY="52.0" text="minuter" />
       <Label fx:id="priceLabel" layoutX="358.0" layoutY="52.0" text="pris" />
       <Label layoutX="382.0" layoutY="52.0" text="kr" />
-      <Label layoutX="164.0" layoutY="76.0" prefHeight="63.0" prefWidth="305.0" text="Bla Bla Bla..." wrapText="true" />
+      <Label fx:id="descriptionItemList" layoutX="164.0" layoutY="76.0" prefHeight="63.0" prefWidth="305.0" text="Bla Bla Bla..." wrapText="true" />
    </children>
 </fx:root>
