@@ -235,7 +235,7 @@ public class RecipeSearchController implements Initializable {
             case "Lätt":
                 iconPath = "recipesearch/resources/icon_difficulty_easy.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Medel":
+            case "Mellan":
                 iconPath = "recipesearch/resources/icon_difficulty_medium.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
             case "Svår":
