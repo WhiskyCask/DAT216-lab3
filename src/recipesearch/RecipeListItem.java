@@ -47,6 +47,10 @@ public class RecipeListItem extends AnchorPane {
         imgMainIngredient.setImage(parentController.getMainIngredientImage(recipe.getMainIngredient()));
         imgDifficulty.setImage(parentController.getDifficultyImage(recipe.getDifficulty()));
 
+        nameLabel.setText(recipe.getName());
+        priceLabel.setText(Integer.toString(recipe.getPrice()));
+        timeLabel.setText(Integer.toString(recipe.getTime()));
+
     }
 
     @FXML

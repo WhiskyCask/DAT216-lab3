@@ -29,14 +29,14 @@
             <Image url="@resources/icon_flag_sweden.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="descriptionItemList" editable="false" layoutX="166.0" layoutY="95.0" prefHeight="49.0" prefWidth="316.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <TextArea fx:id="descriptionItemList" editable="false" layoutX="166.0" layoutY="95.0" prefHeight="49.0" prefWidth="316.0" wrapText="true" />
       <Label fx:id="nameLabel" layoutX="173.0" layoutY="14.0" prefHeight="32.0" prefWidth="119.0" text="Label">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <Label fx:id="timeLabel" layoutX="263.0" layoutY="52.0" prefHeight="16.0" prefWidth="25.0" text="TId" />
-      <Label layoutX="306.0" layoutY="52.0" text="minuter" />
+      <Label layoutX="288.0" layoutY="52.0" text="minuter" />
       <Label fx:id="priceLabel" layoutX="358.0" layoutY="52.0" text="pris" />
       <Label layoutX="382.0" layoutY="52.0" text="kr" />
    </children>
